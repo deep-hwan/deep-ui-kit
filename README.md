@@ -8,7 +8,7 @@
 - Deep Factory Design prioritizes the user's design experience.
 - The official webpage provides detailed explanations on usage and various materials.
 
-## Check out the official website 🧐🧐
+## Check out the official website 🧐🤔
 
 ### 공식 사이트를 확인하세요!
 
