@@ -9,12 +9,14 @@ export default function Box({
   end,
   padding,
   margin,
+  width,
 }) {
   return (
     <div
       className={className}
       css={css}
       style={{
+        width: width ? width : "100%",
         display: "flex",
         flexDirection: "column",
         alignItems: (center && "center") || (end && "end") || "start",
