@@ -1,8 +1,18 @@
-# Getting Started with Create React App
+# Welcome to Deep UI 🔥🔥
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- 즉시 사용할 수 있는 세련된 컴포넌트 및 위젯을 다양하게 경험할 수 있습니다.
+- 딥팩토리 디자인은 사용자의 디자인 경험을 우선시 합니다.
+- 공식 웹페이지에서 사용에 대한 자세한 설명 및 다양한 자료들을 제공합니다.
 
-## Available Scripts
+- Experience a variety of stylish components and widgets that are ready to use.
+- Deep Factory Design prioritizes the user's design experience.
+- The official webpage provides detailed explanations on usage and various materials.
+
+## Check out the official website
+
+### 공식 사이트를 확인하세요!
+
+    🖥️ deepfactory.kr 🖥️
 
 In the project directory, you can run:
 
@@ -68,4 +78,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
 # deep-ui
