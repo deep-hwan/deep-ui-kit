@@ -10,9 +10,9 @@
 
 ## Check out the official website
 
-### 공식 사이트를 확인하세요!
+### 🖥️ 공식 사이트를 확인하세요! 🖥️
 
-    🖥️ deepfactory.kr 🖥️
+    deepfactory.kr
 
 In the project directory, you can run:
 
