@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Text from "./text/Text";
+import Title from "./text/Title";
+import Row from "./layout/Row";
+import Column from "./layout/Column";
+import ItemList from "./item/ItemList";
+import Item from "./item/Item";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Column gap="10px" padding="20px" center>
+      <Title>App</Title>
+
+      <Text>sss</Text>
+
+      <ItemList gap="20px">
+        <Item>sssdasdssss</Item>
+        <Item>sssdasdssss</Item>
+      </ItemList>
+    </Column>
   );
 }
-
-export default App;
