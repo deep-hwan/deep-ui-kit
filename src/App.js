@@ -1,32 +1,38 @@
-import { css } from '@emotion/css'
-import React from 'react'
-import { BackTab, Button } from './components'
-import { CancelTab } from './components/IconTab'
-import { Box, Padding, Section, SizedBox } from './components/Layout'
-import { Tab } from './components/Tab'
-import { Text, Title } from './components/Typography'
+import { css } from "@emotion/css";
+import { BackTab, Text } from "deep-ui-package";
+import React from "react";
+import { Button } from "./components";
+import { CancelTab } from "./components/IconTab";
+import { Box, Padding, Section, SizedBox } from "./components/Layout";
+import { Tab } from "./components/Tab";
 
 export default function App() {
   return (
     <Section>
       <Padding vertical="50px" horizontal="30px">
         <Box maxWidth="360px">
-          <Title styles={styles.title}>안녕하세요 타이틀입니다.</Title>
+          {/* <Title styles={styles.title}>안녕하세요 타이틀입니다.</Title> */}
           <SizedBox height="5px" />
-          <Text>임의의 텍스트 입니다.</Text>
+          <Text
+            styles={css`
+              font-size: 24px;
+            `}
+          >
+            ssss
+          </Text>
 
           <SizedBox height="20px" />
-          <Button onClick={() => console.log('sss')}>다음</Button>
+          <Button onClick={() => console.log("sss")}>다음</Button>
 
           <Tab styles={styles.tab}>싱글탭</Tab>
-          <BackTab onClick={() => alert('뒤로가기')} />
 
+          <BackTab onClick={() => alert("sss")} />
           <SizedBox height="20px" />
           <CancelTab />
         </Box>
       </Padding>
     </Section>
-  )
+  );
 }
 
 const styles = {
@@ -40,4 +46,4 @@ const styles = {
   tab: css`
     margin-top: 20px;
   `,
-}
+};
