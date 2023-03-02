@@ -151,37 +151,27 @@ export function Text(props) {
           {children}
         </p>
       )}
-
-      {as === 'span' && (
-        <span
-          className={css`
-            margin: 0;
-            font-size: ${fontSize ? fontSize : '0.813rem'};
-            color: ${color ? color : '#333'};
-            font-weight: ${w ? w : 'normal'};
-            transition: 0.3s ease-in-out;
-            white-space: pre-line;
-            ${styles}
-          `}
-        >
-          {children}
-        </span>
-      )}
-
-      {!as && (
-        <p
-          className={css`
-            margin: 0;
-            font-size: ${fontSize ? fontSize : '0.938rem'};
-            color: ${color ? color : '#333'};
-            font-weight: ${w ? w : 'normal'};
-            transition: 0.3s ease-in-out;
-            ${styles}
-          `}
-        >
-          {children}
-        </p>
-      )}
     </>
+  )
+}
+
+// TextSpan
+export function TextSpan(props) {
+  const { children, fontSize, color, w, styles } = props
+
+  return (
+    <span
+      className={css`
+        margin: 0;
+        font-size: ${fontSize ? fontSize : '0.813rem'};
+        color: ${color ? color : '#797979'};
+        font-weight: ${w ? w : 'normal'};
+        transition: 0.3s ease-in-out;
+        white-space: pre-line;
+        ${styles}
+      `}
+    >
+      {children}
+    </span>
   )
 }

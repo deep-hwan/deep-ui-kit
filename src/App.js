@@ -1,12 +1,16 @@
-import { css } from "@emotion/css";
-import { BackTab, Text } from "deep-ui-package";
-import React from "react";
-import { Button } from "./components";
-import { CancelTab } from "./components/IconTab";
-import { Box, Padding, Section, SizedBox } from "./components/Layout";
-import { Tab } from "./components/Tab";
+import { css } from '@emotion/css'
+import { BackTab, Text } from 'deep-ui-package'
+import React, { useState } from 'react'
+import { Button } from './components'
+import { CancelTab } from './components/IconTab'
+import { Box, Padding, Section, SizedBox } from './components/Layout'
+import AlartSnackbar from './components/Snackbar'
+import { Tab } from './components/Tab'
+import { TextSpan } from './components/Typography'
 
 export default function App() {
+  const [isView, setIsView] = useState(false)
+
   return (
     <Section>
       <Padding vertical="50px" horizontal="30px">
@@ -22,17 +26,36 @@ export default function App() {
           </Text>
 
           <SizedBox height="20px" />
-          <Button onClick={() => console.log("sss")}>다음</Button>
+          <Button onClick={() => setIsView(true)}>다음</Button>
 
           <Tab styles={styles.tab}>싱글탭</Tab>
 
-          <BackTab onClick={() => alert("sss")} />
+          <TextSpan
+            styles={css`
+              font-size: 20px;
+            `}
+          >
+            sss
+          </TextSpan>
+
+          <BackTab onClick={() => alert('sss')} />
           <SizedBox height="20px" />
           <CancelTab />
+
+          <AlartSnackbar isView={isView} onCancel={() => setIsView(!isView)}>
+            <Text>가입이 완료되었습니다.</Text>
+            <Text
+              styles={css`
+                color: #797979;
+              `}
+            >
+              asdsad
+            </Text>
+          </AlartSnackbar>
         </Box>
       </Padding>
     </Section>
-  );
+  )
 }
 
 const styles = {
@@ -46,4 +69,4 @@ const styles = {
   tab: css`
     margin-top: 20px;
   `,
-};
+}

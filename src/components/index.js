@@ -1,10 +1,12 @@
-import { Text, Title } from './Typography'
+import { Text, Title, TextSpan } from './Typography'
 import { Box, Row, Column, Padding, SizedBox, Section } from './Layout'
 import { Button, Tab } from './Tab'
 import { BackTab, CancelTab } from './IconTab'
+import AlartSnackbar from './Snackbar'
 
 export {
   Text,
+  TextSpan,
   Title,
   Box,
   Column,
@@ -15,4 +17,6 @@ export {
   Button,
   Tab,
   BackTab,
+  CancelTab,
+  AlartSnackbar,
 }
