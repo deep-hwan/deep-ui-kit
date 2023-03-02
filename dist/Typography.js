@@ -4,10 +4,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.Text = Text;
+exports.TextSpan = TextSpan;
 exports.Title = Title;
 var _css = require("@emotion/css");
 var _react = _interopRequireDefault(require("react"));
-var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10, _templateObject11;
+var _templateObject, _templateObject2, _templateObject3, _templateObject4, _templateObject5, _templateObject6, _templateObject7, _templateObject8, _templateObject9, _templateObject10;
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 // 타이틀
@@ -47,9 +48,17 @@ function Text(props) {
     styles = props.styles;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, as === 'p' && /*#__PURE__*/_react.default.createElement("p", {
     className: (0, _css.css)(_templateObject9 || (_templateObject9 = _taggedTemplateLiteral(["\n            margin: 0;\n            font-size: ", ";\n            color: ", ";\n            font-weight: ", ";\n            transition: 0.3s ease-in-out;\n            white-space: pre-line;\n            ", "\n          "])), fontSize ? fontSize : '0.938rem', color ? color : '#333', w ? w : 'normal', styles)
-  }, children), as === 'span' && /*#__PURE__*/_react.default.createElement("span", {
-    className: (0, _css.css)(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n            margin: 0;\n            font-size: ", ";\n            color: ", ";\n            font-weight: ", ";\n            transition: 0.3s ease-in-out;\n            white-space: pre-line;\n            ", "\n          "])), fontSize ? fontSize : '0.813rem', color ? color : '#333', w ? w : 'normal', styles)
-  }, children), !as && /*#__PURE__*/_react.default.createElement("p", {
-    className: (0, _css.css)(_templateObject11 || (_templateObject11 = _taggedTemplateLiteral(["\n            margin: 0;\n            font-size: ", ";\n            color: ", ";\n            font-weight: ", ";\n            transition: 0.3s ease-in-out;\n            ", "\n          "])), fontSize ? fontSize : '0.938rem', color ? color : '#333', w ? w : 'normal', styles)
   }, children));
+}
+
+// TextSpan
+function TextSpan(props) {
+  var children = props.children,
+    fontSize = props.fontSize,
+    color = props.color,
+    w = props.w,
+    styles = props.styles;
+  return /*#__PURE__*/_react.default.createElement("span", {
+    className: (0, _css.css)(_templateObject10 || (_templateObject10 = _taggedTemplateLiteral(["\n        margin: 0;\n        font-size: ", ";\n        color: ", ";\n        font-weight: ", ";\n        transition: 0.3s ease-in-out;\n        white-space: pre-line;\n        ", "\n      "])), fontSize ? fontSize : '0.813rem', color ? color : '#797979', w ? w : 'normal', styles)
+  }, children);
 }

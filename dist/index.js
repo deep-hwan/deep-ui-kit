@@ -3,6 +3,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+Object.defineProperty(exports, "AlartSnackbar", {
+  enumerable: true,
+  get: function get() {
+    return _Snackbar.default;
+  }
+});
 Object.defineProperty(exports, "BackTab", {
   enumerable: true,
   get: function get() {
@@ -19,6 +25,12 @@ Object.defineProperty(exports, "Button", {
   enumerable: true,
   get: function get() {
     return _Tab.Button;
+  }
+});
+Object.defineProperty(exports, "CancelTab", {
+  enumerable: true,
+  get: function get() {
+    return _IconTab.CancelTab;
   }
 });
 Object.defineProperty(exports, "Column", {
@@ -63,6 +75,12 @@ Object.defineProperty(exports, "Text", {
     return _Typography.Text;
   }
 });
+Object.defineProperty(exports, "TextSpan", {
+  enumerable: true,
+  get: function get() {
+    return _Typography.TextSpan;
+  }
+});
 Object.defineProperty(exports, "Title", {
   enumerable: true,
   get: function get() {
@@ -73,3 +91,5 @@ var _Typography = require("./Typography");
 var _Layout = require("./Layout");
 var _Tab = require("./Tab");
 var _IconTab = require("./IconTab");
+var _Snackbar = _interopRequireDefault(require("./Snackbar"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
