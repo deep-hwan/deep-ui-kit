@@ -3,6 +3,9 @@ import { Box, Row, Column, Padding, SizedBox, Section } from './Layout'
 import { Button, Tab } from './Tab'
 import { BackTab, CancelTab } from './IconTab'
 import AlartSnackbar from './Snackbar'
+import ModalBottomSheet from './ModalBottomSheet'
+import ModalSheet from './ModalSheet'
+import Dialog from './Dialog'
 
 export {
   Text,
@@ -19,4 +22,7 @@ export {
   BackTab,
   CancelTab,
   AlartSnackbar,
+  ModalBottomSheet,
+  ModalSheet,
+  Dialog,
 }

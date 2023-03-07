@@ -1,11 +1,12 @@
 import { css } from '@emotion/css'
 import React, { useEffect, useRef } from 'react'
 
-export default function AlartSnackbar({ children, isView, onCancel }) {
+export default function AlartSnackbar({ children, view, onCancel }) {
   const ref = useRef()
 
+  // 외부클릭
   const clickModalOutside = event => {
-    if (isView && !ref.current?.contains(event.target)) {
+    if (view && !ref.current?.contains(event.target)) {
       onCancel()
     }
   }
@@ -15,7 +16,7 @@ export default function AlartSnackbar({ children, isView, onCancel }) {
     return () => {
       document.removeEventListener('mousedown', clickModalOutside)
     }
-  }, [isView])
+  }, [view])
 
   return (
     <div
@@ -24,7 +25,7 @@ export default function AlartSnackbar({ children, isView, onCancel }) {
         z-index: 99999;
         //
         position: fixed;
-        top: ${isView ? '0' : '-100%'};
+        top: ${view ? '0' : '-100%'};
         left: 50%;
         transform: translateX(-50%);
         //
@@ -35,7 +36,7 @@ export default function AlartSnackbar({ children, isView, onCancel }) {
         flex-direction: column;
         padding: 30px 20px;
         //
-        opacity: ${isView ? 1 : 0};
+        opacity: ${view ? 1 : 0};
         //
         transition: 0.3s ease-in-out;
         overflow-y: auto;
@@ -46,7 +47,7 @@ export default function AlartSnackbar({ children, isView, onCancel }) {
 
         @media (max-width: 600px) {
           top: auto;
-          bottom: ${isView ? '0' : '-100%'};
+          bottom: ${view ? '0' : '-100%'};
         }
       `}
     >
