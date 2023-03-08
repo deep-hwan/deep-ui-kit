@@ -39,6 +39,24 @@ Object.defineProperty(exports, "Column", {
     return _Layout.Column;
   }
 });
+Object.defineProperty(exports, "Dialog", {
+  enumerable: true,
+  get: function get() {
+    return _Dialog.default;
+  }
+});
+Object.defineProperty(exports, "ModalBottomSheet", {
+  enumerable: true,
+  get: function get() {
+    return _ModalBottomSheet.default;
+  }
+});
+Object.defineProperty(exports, "ModalSheet", {
+  enumerable: true,
+  get: function get() {
+    return _ModalSheet.default;
+  }
+});
 Object.defineProperty(exports, "Padding", {
   enumerable: true,
   get: function get() {
@@ -92,4 +110,7 @@ var _Layout = require("./Layout");
 var _Tab = require("./Tab");
 var _IconTab = require("./IconTab");
 var _Snackbar = _interopRequireDefault(require("./Snackbar"));
+var _ModalBottomSheet = _interopRequireDefault(require("./ModalBottomSheet"));
+var _ModalSheet = _interopRequireDefault(require("./ModalSheet"));
+var _Dialog = _interopRequireDefault(require("./Dialog"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

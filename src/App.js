@@ -1,19 +1,19 @@
-import { css } from '@emotion/css'
-import { BackTab, Text } from 'deep-ui-package'
-import React, { useState } from 'react'
-import { Button } from './components'
-import Dialog from './components/Dialog'
-import { CancelTab } from './components/IconTab'
-import { Box, Padding, Section, SizedBox } from './components/Layout'
-import ModalBottomSheet from './components/ModalBottomSheet'
-import ModalSheet from './components/ModalSheet'
-import AlartSnackbar from './components/Snackbar'
-import { Tab } from './components/Tab'
-import { TextSpan } from './components/Typography'
+import { css } from "@emotion/css";
+
+import React, { useState } from "react";
+import { Button } from "./components";
+import Dialog from "./components/Dialog";
+import { CancelTab } from "./components/IconTab";
+import { Box, Padding, Section, SizedBox } from "./components/Layout";
+import ModalBottomSheet from "./components/ModalBottomSheet";
+import ModalSheet from "./components/ModalSheet";
+import AlartSnackbar from "./components/Snackbar";
+import { Tab } from "./components/Tab";
+import { TextSpan } from "./components/Typography";
 
 export default function App() {
-  const [isView, setIsView] = useState(false)
-  const [isDialog, setIsDialog] = useState(false)
+  const [isView, setIsView] = useState(false);
+  const [isDialog, setIsDialog] = useState(false);
 
   return (
     <Section>
@@ -21,13 +21,6 @@ export default function App() {
         <Box maxWidth="360px">
           {/* <Title styles={styles.title}>안녕하세요 타이틀입니다.</Title> */}
           <SizedBox height="5px" />
-          <Text
-            styles={css`
-              font-size: 24px;
-            `}
-          >
-            ssss
-          </Text>
 
           <SizedBox height="20px" />
           <Button onClick={() => setIsView(true)}>다음</Button>
@@ -43,7 +36,6 @@ export default function App() {
             sssasdasd
           </TextSpan>
 
-          <BackTab onClick={() => alert('sss')} />
           <SizedBox height="20px" />
           <CancelTab />
 
@@ -114,7 +106,7 @@ export default function App() {
         </Box>
       </Padding>
     </Section>
-  )
+  );
 }
 
 const styles = {
@@ -128,4 +120,4 @@ const styles = {
   tab: css`
     margin-top: 20px;
   `,
-}
+};
