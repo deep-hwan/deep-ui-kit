@@ -39,7 +39,7 @@ export default function ScrollTopTab() {
             window.removeEventListener("scroll", handleFollow);
         };
     }, [ScrollY]);
-    return (_jsx(_Fragment, { children: ScrollY > 100 && (_jsx(Tab, __assign({ type: "button", onClick: handleTop }, { children: _jsx(TopTabIcon, {}) }))) }));
+    return (_jsx(_Fragment, { children: ScrollY > 60 && (_jsx(Tab, __assign({ type: "button", onClick: handleTop }, { children: _jsx(TopTabIcon, {}) }))) }));
 }
 // 스타일
 var Tab = styled.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  position: fixed;\n  bottom: 30px;\n  right: 20px;\n  width: 44px;\n  height: 44px;\n  border-radius: 100px;\n  background-color: #fff;\n  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  color: #666;\n  font-weight: 500;\n  cursor: pointer;\n  z-index: 7777;\n  user-select: none;\n  transition: 0.3s ease-in-out;\n  outline: none;\n  border: none;\n\n  svg {\n    width: 20px;\n  }\n\n  @media (max-width: 600px) {\n    width: 42px;\n    height: 42px;\n\n    svg {\n      width: 18px;\n    }\n  }\n"], ["\n  position: fixed;\n  bottom: 30px;\n  right: 20px;\n  width: 44px;\n  height: 44px;\n  border-radius: 100px;\n  background-color: #fff;\n  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  color: #666;\n  font-weight: 500;\n  cursor: pointer;\n  z-index: 7777;\n  user-select: none;\n  transition: 0.3s ease-in-out;\n  outline: none;\n  border: none;\n\n  svg {\n    width: 20px;\n  }\n\n  @media (max-width: 600px) {\n    width: 42px;\n    height: 42px;\n\n    svg {\n      width: 18px;\n    }\n  }\n"])));

@@ -1,12 +1,9 @@
-import { CSSObject } from "@emotion/css";
 import { ReactNode } from "react";
 interface SectionProps {
-    styles?: CSSObject;
     children?: ReactNode;
 }
 export declare function Section(props: SectionProps): import("react/jsx-runtime").JSX.Element;
 interface RowProps {
-    styles?: CSSObject;
     children?: ReactNode;
     gap?: string;
     start?: boolean;
@@ -16,7 +13,6 @@ interface RowProps {
 }
 export declare function Row(props: RowProps): import("react/jsx-runtime").JSX.Element;
 interface ColumnProps {
-    styles?: CSSObject;
     children?: ReactNode;
     gap?: string;
     center?: boolean;
@@ -26,7 +22,6 @@ interface ColumnProps {
 }
 export declare function Column(props: ColumnProps): import("react/jsx-runtime").JSX.Element;
 interface BoxProps {
-    styles?: CSSObject;
     children?: ReactNode;
     gap?: string;
     center?: boolean;
@@ -37,7 +32,6 @@ interface BoxProps {
 }
 export declare function Box(props: BoxProps): import("react/jsx-runtime").JSX.Element;
 interface SizedBoxProps {
-    styles?: CSSObject;
     children?: ReactNode;
     width?: string;
     height?: string;
