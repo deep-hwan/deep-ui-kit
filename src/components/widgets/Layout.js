@@ -1,9 +1,9 @@
-import { css } from '@emotion/css'
-import React from 'react'
+import { css } from "@emotion/css";
+import React from "react";
 
 //Section
 export function Section(props) {
-  const { styles, children } = props
+  const { styles, children } = props;
 
   return (
     <section
@@ -20,12 +20,12 @@ export function Section(props) {
     >
       {children}
     </section>
-  )
+  );
 }
 
 //row
 export function Row(props) {
-  const { styles, children, gap, start, end, padding, margin } = props
+  const { styles, children, gap, start, end, padding, margin } = props;
 
   return (
     <div
@@ -34,7 +34,7 @@ export function Row(props) {
         width: 100%;
         display: flex;
         flex-direction: row;
-        align-items: ${(start && 'start') || (end && 'end') || 'center'};
+        align-items: ${(start && "start") || (end && "end") || "center"};
         column-gap: ${gap};
         padding: ${padding};
         margin: ${margin};
@@ -43,12 +43,12 @@ export function Row(props) {
     >
       {children}
     </div>
-  )
+  );
 }
 
 //column
 export function Column(props) {
-  const { styles, children, gap, center, end, padding, margin } = props
+  const { styles, children, gap, center, end, padding, margin } = props;
 
   return (
     <div
@@ -57,7 +57,7 @@ export function Column(props) {
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: ${(center && 'center') || (end && 'end') || 'start'};
+        align-items: ${(center && "center") || (end && "end") || "start"};
         column-gap: ${gap};
         padding: ${padding};
         margin: ${margin};
@@ -66,13 +66,13 @@ export function Column(props) {
     >
       {children}
     </div>
-  )
+  );
 }
 
 //Box
 export function Box(props) {
   const { styles, children, gap, center, end, padding, margin, maxWidth } =
-    props
+    props;
 
   return (
     <div
@@ -82,7 +82,7 @@ export function Box(props) {
         max-width: ${maxWidth};
         display: flex;
         flex-direction: column;
-        align-items: ${(center && 'center') || (end && 'end') || 'start'};
+        align-items: ${(center && "center") || (end && "end") || "start"};
         column-gap: ${gap};
         padding: ${padding};
         margin: ${margin};
@@ -91,65 +91,22 @@ export function Box(props) {
     >
       {children}
     </div>
-  )
-}
-
-//Padding
-export function Padding(props) {
-  const {
-    styles,
-    children,
-    R,
-    L,
-    T,
-    B,
-    vertical,
-    horizontal,
-    marginLeft,
-    marginRight,
-    marginTop,
-    marginBottom,
-  } = props
-
-  return (
-    <div
-      className={css`
-        ${styles}
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: ${L || horizontal};
-        padding-right: ${R || horizontal};
-        padding-top: ${T || vertical};
-        padding-bottom: ${B || vertical};
-
-        margin-left: ${marginLeft};
-        margin-right: ${marginRight};
-        margin-top: ${marginTop};
-        margin-bottom: ${marginBottom};
-
-        transition: 0.3s ease-in-out;
-      `}
-    >
-      {children}
-    </div>
-  )
+  );
 }
 
 //Padding
 export function SizedBox(props) {
-  const { styles, children, width, height } = props
+  const { styles, children, width, height } = props;
 
   return (
     <div
       className={css`
         ${styles}
-        height: ${(width && '100%') || height};
-        width: ${(height && '100%') || width};
+        height: ${(width && "100%") || height};
+        width: ${(height && "100%") || width};
       `}
     >
       {children}
     </div>
-  )
+  );
 }

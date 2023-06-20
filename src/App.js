@@ -1,123 +1,82 @@
-import { css } from "@emotion/css";
-
 import React, { useState } from "react";
-import { Button } from "./components";
-import Dialog from "./components/Dialog";
-import { CancelTab } from "./components/IconTab";
-import { Box, Padding, Section, SizedBox } from "./components/Layout";
-import ModalBottomSheet from "./components/ModalBottomSheet";
-import ModalSheet from "./components/ModalSheet";
-import AlartSnackbar from "./components/Snackbar";
-import { Tab } from "./components/Tab";
-import { TextSpan } from "./components/Typography";
+import BottomSheet from "./components/widgets/BottomSheet";
+import { Dialog, Snackbar, Text, Title } from "./components";
+import Drawer from "./components/widgets/Drawer";
 
 export default function App() {
-  const [isView, setIsView] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [isDialog, setIsDialog] = useState(false);
+  const [isDraw, setIsDraw] = useState(false);
 
   return (
-    <Section>
-      <Padding vertical="50px" horizontal="30px">
-        <Box maxWidth="360px">
-          {/* <Title styles={styles.title}>안녕하세요 타이틀입니다.</Title> */}
-          <SizedBox height="5px" />
+    <>
+      <button type="button" onClick={() => setIsOpen(!isOpen)}>
+        열기 모달
+      </button>
 
-          <SizedBox height="20px" />
-          <Button onClick={() => setIsView(true)}>다음</Button>
-          <Button onClick={() => setIsDialog(true)}>다이아로그</Button>
+      <button type="button" onClick={() => setIsDialog(!isOpen)}>
+        열기 모달2
+      </button>
 
-          <Tab styles={styles.tab}>싱글탭</Tab>
+      <button type="button" onClick={() => setIsDraw(!isOpen)}>
+        열기 모달2
+      </button>
 
-          <TextSpan
-            styles={css`
-              font-size: 20px;
-            `}
-          >
-            sssasdasd
-          </TextSpan>
+      <BottomSheet
+        view={isOpen}
+        onCancel={() => setIsOpen(false)}
+      ></BottomSheet>
 
-          <SizedBox height="20px" />
-          <CancelTab />
+      <Title as="h3">asdasd</Title>
 
-          <Dialog view={isDialog} onCancel={() => setIsDialog(false)}>
-            [32] Sed ut perspiciatis, unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam eaque ipsa,
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas
-            sit, aspernatur aut odit aut fugit, sed quia consequuntur magni
-            dolores eos, qui ratione voluptatem sequi nesciunt, neque porro
-            quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur,
-            adipisci velit, sed quia non numquam eius modi tempora incidunt, ut
-            lalabore et dolore magnam aliquam [32] Sed ut perspiciatis, unde
-            omnis iste natus error sit voluptatem accusantium doloremque
-            laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore
-            veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-            Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit
-            aut fugit, sed quia consequuntur magni dolores eos, qui ratione
-            voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem
-            ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia
-            non numquam eius modi tempora incidunt, ut lalabore et dolore magnam
-            aliquam
-          </Dialog>
+      <Text>asdsad</Text>
 
-          <ModalSheet
-            view={isView}
-            onCancel={() => setIsView(!isView)}
-            title="자산 찾기"
-          >
-            ssadasdsad
-          </ModalSheet>
+      <Snackbar
+        cancelTab={true}
+        view={isOpen}
+        onCancel={() => setIsOpen(false)}
+      >
+        s centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+      </Snackbar>
 
-          {/* <ModalBottomSheet
-            view={isView}
-            title="학교찾기"
-            onCancel={() => setIsView(!isView)}
-            action={true}
-            actionName="제출"
-            onClick={() => console.log('sss')}
-          >
-            <div
-              className={css`
-                padding: 20px;
-              `}
-            >
-              [32] Sed ut perspiciatis, unde omnis iste natus error sit
-              voluptatem accusantium doloremque laudantium, totam rem aperiam
-              eaque ipsa, quae ab illo inventore veritatis et quasi architecto
-              beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem,
-              quia voluptas sit, aspernatur aut odit aut fugit, sed quia
-              consequuntur magni dolores eos, qui ratione voluptatem sequi
-              nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor
-              sit, amet, consectetur, adipisci velit, sed quia non numquam eius
-              modi tempora incidunt, ut lalabore et dolore magnam aliquam
-            </div>
-          </ModalBottomSheet> */}
+      <Dialog view={isDialog} onCancel={() => setIsDialog(false)}>
+        ss
+      </Dialog>
 
-          {/* <AlartSnackbar view={isView} onCancel={() => setIsView(!isView)}>
-            <Text>가입이 완료되었습니다.</Text>
-            <Text
-              styles={css`
-                color: #797979;
-              `}
-            >
-              asdsad
-            </Text>
-          </AlartSnackbar> */}
-        </Box>
-      </Padding>
-    </Section>
+      <Drawer view={isDraw} onCancel={() => setIsDraw(false)}></Drawer>
+      <section>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum. Why do we use it? It is a long established fact that a
+        reader will be distracted by the readable content of a page when looking
+        at its layout. The point of using Lorem Ipsum is that it has a
+        more-or-less normal distribution of letters, as opposed to using
+        'Content here, content here', making it look like readable English. Many
+        desktop publishing packages and web page editors now use Lorem Ipsum as
+        their default model text, and a search for 'lorem ipsum' will uncover
+        many web sites still in their infancy. Various versions have evolved
+        over the years, sometimes by accident, sometimes on purpose (injected
+        humour and the like). Where does it come from? Contrary to popular
+        belief, Lorem Ipsum is not simply random text. It has roots in a piece
+        of classical Latin literature from 45 BC, making it over 2000 years old.
+        Richard McClintock, a Latin professor at Hampden-Sydney College in
+        Virginia, looked up one of the more obscure Latin words, consectetur,
+        from a Lorem Ipsum passage, and going through the cites of the word in
+        classical literature, discovered the undoubtable source. Lorem Ipsum
+        comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et
+        Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+        This book is a treatise on the theory of ethics, very popular during the
+        Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+        amet..", comes from a line in section 1.10.32. The standard chunk of
+        Lorem Ipsum used since the 150
+      </section>
+    </>
   );
 }
-
-const styles = {
-  title: css`
-    font-size: 26px;
-    @media (max-width: 400px) {
-      font-size: 18px;
-    }
-  `,
-
-  tab: css`
-    margin-top: 20px;
-  `,
-};
