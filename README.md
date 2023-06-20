@@ -110,7 +110,7 @@ function App() {
 
 Drawer menu function that is exposed when you click toggle on the menu
 
-<img src="https://github.com/deep-hwan/deep-ui-kit/blob/main/public/img/drawer-img.png?raw=true" alt="Title Image">
+<img src="https://github.com/deep-hwan/deep-ui-kit/blob/main/public/img/drawer-img.png?raw=true" alt="Title Image" style="width: 400px;" alt="Title Image">
 
 ### Example
 
@@ -147,7 +147,7 @@ function App() {
 
 Widgets used for alert types
 
-<img src="https://github.com/deep-hwan/deep-ui-kit/blob/main/public/img/snackbar-img.png?raw=true" alt="Title Image">
+<img src="https://github.com/deep-hwan/deep-ui-kit/blob/main/public/img/snackbar-img.png?raw=true" alt="Title Image" style="width: 400px;" alt="Title Image">
 
 ### Example
 
