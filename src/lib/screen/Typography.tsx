@@ -9,11 +9,10 @@ interface TitleProps {
   fontSize?: string;
   color?: string;
   w?: string;
-  styles?: SerializedStyles;
 }
 
 export function Title(props: TitleProps) {
-  const { as, children, styles, fontSize, color, w } = props;
+  const { as, children, fontSize, color, w } = props;
 
   return (
     <>
@@ -25,7 +24,6 @@ export function Title(props: TitleProps) {
             color: ${color ? color : "#333"};
             font-weight: ${w ? w : "bold"};
             transition: 0.3s ease-in-out;
-            ${styles}
           `}
         >
           {children}
@@ -40,7 +38,6 @@ export function Title(props: TitleProps) {
             color: ${color ? color : "#333"};
             font-weight: ${w ? w : "bold"};
             transition: 0.3s ease-in-out;
-            ${styles}
           `}
         >
           {children}
@@ -55,7 +52,6 @@ export function Title(props: TitleProps) {
             color: ${color ? color : "#333"};
             font-weight: ${w ? w : "bold"};
             transition: 0.3s ease-in-out;
-            ${styles}
           `}
         >
           {children}
@@ -70,7 +66,6 @@ export function Title(props: TitleProps) {
             color: ${color ? color : "#333"};
             font-weight: ${w ? w : "bold"};
             transition: 0.3s ease-in-out;
-            ${styles}
           `}
         >
           {children}
@@ -85,7 +80,6 @@ export function Title(props: TitleProps) {
             color: ${color ? color : "#333"};
             font-weight: ${w ? w : "bold"};
             transition: 0.3s ease-in-out;
-            ${styles}
           `}
         >
           {children}
@@ -100,7 +94,6 @@ export function Title(props: TitleProps) {
             color: ${color ? color : "#333"};
             font-weight: ${w ? w : "bold"};
             transition: 0.3s ease-in-out;
-            ${styles}
           `}
         >
           {children}
@@ -115,7 +108,6 @@ export function Title(props: TitleProps) {
             color: ${color ? color : "#333"};
             font-weight: ${w ? w : "bold"};
             transition: 0.3s ease-in-out;
-            ${styles}
           `}
         >
           {children}
@@ -130,7 +122,6 @@ export function Title(props: TitleProps) {
             color: ${color ? color : "#333"};
             font-weight: ${w ? w : "bold"};
             transition: 0.3s ease-in-out;
-            ${styles}
           `}
         >
           {children}
@@ -141,16 +132,14 @@ export function Title(props: TitleProps) {
 }
 
 interface TextProps {
-  as?: "p";
   children: ReactNode;
   fontSize?: string;
   color?: string;
   w?: string;
-  styles?: SerializedStyles;
 }
 
 export function Text(props: TextProps) {
-  const { children, fontSize, color, w, styles } = props;
+  const { children, fontSize, color, w } = props;
 
   return (
     <>
@@ -162,7 +151,6 @@ export function Text(props: TextProps) {
           font-weight: ${w ? w : "normal"};
           transition: 0.3s ease-in-out;
           white-space: pre-line;
-          ${styles}
         `}
       >
         {children}
@@ -176,10 +164,9 @@ interface TextSpanProps {
   fontSize?: string;
   color?: string;
   w?: string;
-  styles?: SerializedStyles;
 }
 export function TextSpan(props: TextSpanProps) {
-  const { children, fontSize, color, w, styles } = props;
+  const { children, fontSize, color, w } = props;
 
   return (
     <span
@@ -190,7 +177,6 @@ export function TextSpan(props: TextSpanProps) {
         font-weight: ${w ? w : "normal"};
         transition: 0.3s ease-in-out;
         white-space: pre-line;
-        ${styles}
       `}
     >
       {children}

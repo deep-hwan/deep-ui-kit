@@ -8,11 +8,13 @@ import {
   Section,
   SizedBox,
   Snackbar,
+  Text,
   Title,
 } from "./lib";
 import LoadingSpinner from "./lib/screen/loading-spinner";
 import ScrollTopTab from "./lib/screen/ScrollTopTab";
 import BottomSheet from "./lib/widgets/BottomSheet";
+import { css } from "@emotion/react";
 
 export default function App() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -23,11 +25,12 @@ export default function App() {
   return (
     <>
       <Section>
-        {/* <Row start gap="20px" padding="30px" margin="50px">
-          <Box>box</Box>
-          <Box maxWidth="200px">box</Box> 
-          <Box>box</Box>
-        </Row> */}
+        <Title as="h6" fontSize="60px" color="#111" w="500">
+          asdsad
+        </Title>
+        <Text fontSize="15px" color="#797979" w="500">
+          asdsad
+        </Text>
         <Column center gap="10px" padding="40px" margin="50px">
           <Box>box</Box>
           <Box>box</Box>
