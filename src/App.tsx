@@ -52,11 +52,13 @@ export default function App() {
 function Index() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [isDialog, setIsDialog] = useState<boolean>(false);
-  const [isDraw, setIsDraw] = useState<boolean>(false);
+  const [isDrawer, setIsDrawer] = useState<boolean>(false);
   const [isSheet, setIsSheet] = useState<boolean>(false);
 
   return (
     <>
+      <LoadingSpinner />
+      <ScrollTopTab />
       <Section>
         <button type="button" onClick={() => setIsOpen(!isOpen)}>
           Open Snackbar
@@ -64,7 +66,7 @@ function Index() {
         <button type="button" onClick={() => setIsDialog(!isDialog)}>
           Open Dialog
         </button>
-        <button type="button" onClick={() => setIsDraw(!isOpen)}>
+        <button type="button" onClick={() => setIsDrawer(!isOpen)}>
           Open Drawer
         </button>
         <button type="button" onClick={() => setIsSheet(!isOpen)}>
@@ -90,7 +92,7 @@ function Index() {
         Hello deeop-ui-kit this is tpye "SnackBar"
       </Snackbar>
 
-      <Drawer view={isDraw} onCancel={() => setIsDraw(false)} theme="light">
+      <Drawer view={isDrawer} onCancel={() => setIsDrawer(false)} theme="light">
         ..
       </Drawer>
 

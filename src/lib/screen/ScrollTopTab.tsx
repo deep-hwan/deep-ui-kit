@@ -31,7 +31,7 @@ export default function ScrollTopTab() {
 
   return (
     <>
-      {ScrollY > 100 && (
+      {ScrollY > 60 && (
         <Tab type="button" onClick={handleTop}>
           <TopTabIcon />
         </Tab>
