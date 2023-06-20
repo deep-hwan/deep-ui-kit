@@ -1,21 +1,23 @@
-# Welcome to Deep UI 🔥🔥
+# <div align="center">
 
-- 즉시 사용할 수 있는 세련된 컴포넌트 및 위젯을 다양하게 경험할 수 있습니다.
-- 딥팩토리 디자인은 사용자의 디자인 경험을 우선시 합니다.
-- 공식 웹페이지에서 사용에 대한 자세한 설명 및 다양한 자료들을 제공합니다.
+<div align="center" style="width: 100px;" >
+<img src="https://github.com/deep-hwan/react-kakao-share/blob/main/public/kakao-img.png" style="width: 100px;" alt="Title Image">
+</div>
+<h1 align="center">deep-ui-kit</h1>
 
-- Experience a variety of stylish components and widgets that are ready to use.
-- Deep Factory Design prioritizes the user's design experience.
-- The official webpage provides detailed explanations on usage and various materials.
+<p align="center">
+Design Ui-Kit provides design layout and animation modals
+</p>
+</div>
 
-## Check out the official website 🧐🤔
+## Install
 
-### 공식 사이트를 확인하세요!
+    npm install deep-ui-kit
+    # or
+    yarn add deep-ui-kit
 
-    deepfactory.kr
+---
 
-In the project directory, you can run:
+## Simple Usage
 
-### 현재 준비 중입니다... It is currently being prepared...
-
-It is currently being prepared... Wait Please
+## Layout
