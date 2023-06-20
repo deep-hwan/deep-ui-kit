@@ -24,8 +24,8 @@ Design Ui-Kit provides design layout and animation modals
 
 IOS model type sheet type bottom-chet, and then touch the outside click external click
 
-<div align="center" style="width: 240px;" >
-<img src="https://github.com/deep-hwan/deep-ui-kit/blob/main/public/img/sheet-img.png?raw=true" style="width: 240px;" alt="Title Image">
+<div align="center" style="width: 160px;">
+  <img src="https://github.com/deep-hwan/deep-ui-kit/blob/main/public/img/sheet-img.png?raw=true" width="160" alt="Title Image">
 </div>
 
 ### Example
@@ -67,8 +67,8 @@ function App() {
 
 ## Modal : Dialog Usage
 
-<div align="center" style="width: 240px;" >
-<img src="https://github.com/deep-hwan/deep-ui-kit/blob/main/public/img/dialog-img.png?raw=true" style="width: 400px;" alt="Title Image">
+<div align="center" style="width: 160px;">
+  <img src="https://github.com/deep-hwan/deep-ui-kit/blob/main/public/img/sheet-img.png?raw=true" width="160" alt="Title Image">
 </div>
 
 ### Example
@@ -114,8 +114,8 @@ function App() {
 
 Drawer menu function that is exposed when you click toggle on the menu
 
-<div align="center" style="width: 240px;" >
-<img src="https://github.com/deep-hwan/deep-ui-kit/blob/main/public/img/drawer-img.png?raw=true" alt="Title Image" style="width: 400px;" alt="Title Image">
+<div align="center" style="width: 160px;">
+  <img src="https://github.com/deep-hwan/deep-ui-kit/blob/main/public/img/sheet-img.png?raw=true" width="160" alt="Title Image">
 </div>
 
 ### Example
@@ -153,8 +153,8 @@ function App() {
 
 Widgets used for alert types
 
-<div align="center" style="width: 240px;" >
-<img src="https://github.com/deep-hwan/deep-ui-kit/blob/main/public/img/snackbar-img.png?raw=true" alt="Title Image" style="width: 400px;" alt="Title Image">
+<div align="center" style="width: 160px;">
+  <img src="https://github.com/deep-hwan/deep-ui-kit/blob/main/public/img/sheet-img.png?raw=true" width="160" alt="Title Image">
 </div>
 
 ### Example
