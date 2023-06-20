@@ -1,19 +1,26 @@
 import styled from "@emotion/styled";
 import React, { useEffect, useRef, useState } from "react";
 
-export default function BottomSheet(props) {
+interface BottomSheetProps {
+  children: React.ReactNode;
+  view: boolean;
+  onCancel: () => void;
+  theme: string;
+}
+
+export default function BottomSheet(props: BottomSheetProps) {
   const { children, view, onCancel, theme } = props;
-  const ref = useRef();
+  const ref = useRef<HTMLDivElement>(null);
   const [startY, setStartY] = useState(0);
   const [currentY, setCurrentY] = useState(0);
 
-  const handleTouchStart = (event) => {
+  const handleTouchStart = (event: React.TouchEvent) => {
     const touch = event.touches[0];
     setStartY(touch.clientY);
     setCurrentY(touch.clientY);
   };
 
-  const handleTouchMove = (event) => {
+  const handleTouchMove = (event: React.TouchEvent) => {
     const touch = event.touches[0];
     setCurrentY(touch.clientY);
   };
@@ -32,8 +39,8 @@ export default function BottomSheet(props) {
 
   //
   // 외부클릭
-  const clickModalOutside = (event) => {
-    if (view && !ref.current?.contains(event.target)) {
+  const clickModalOutside = (event: MouseEvent) => {
+    if (view && ref.current && !ref.current.contains(event.target as Node)) {
       onCancel();
     }
   };
@@ -83,7 +90,7 @@ export default function BottomSheet(props) {
   );
 }
 
-const LayerBlur = styled.div`
+const LayerBlur = styled.div<{ isActive: boolean }>`
   z-index: 9999;
   position: fixed;
   top: 0;
@@ -98,7 +105,7 @@ const LayerBlur = styled.div`
   background-color: rgba(0, 0, 0, 0.25);
 `;
 
-const Sheet = styled.div`
+const Sheet = styled.div<{ isActive: boolean; theme: string }>`
   z-index: 99990;
   position: fixed;
   top: ${({ isActive }) => (isActive ? "80px" : "100%")};
@@ -109,7 +116,7 @@ const Sheet = styled.div`
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => (theme === "dark" ? "#292929" : "#fff")};
-  border-radius: 18px 18px 0 0;
+  border-radius: 22px 22px 0 0;
   box-shadow: 0 3px 30px rgba(0, 0, 0, 0.1);
   transition: 0.25s ease-in-out;
   opacity: ${({ isActive }) => (isActive ? 1 : 0)};
@@ -125,7 +132,7 @@ const Sheet = styled.div`
   }
 `;
 
-const CloseBox = styled.div`
+const CloseBox = styled.div<{ theme: string }>`
   width: 100%;
   padding: 11px;
   display: flex;

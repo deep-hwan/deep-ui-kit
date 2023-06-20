@@ -6,19 +6,19 @@
     "dist",
     "README.md"
   ],
-  "repository": {
-    "type": "git",
-    "url": "URL_OF_YOUR_REPOSITORY"
-  },
   "module": "dist/index.js",
   "main": "dist/index.js",
   "dependencies": {
-    "@emotion/css": "^11.10.6",
-    "@emotion/react": "^11.10.6",
+    "@emotion/css": "^11.11.2",
+    "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.10.6",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.3.1",
+    "@types/react": "^18.2.13",
+    "@types/react-dom": "^18.2.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-kakao-share": "^0.4.0",
@@ -29,12 +29,12 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "compile": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files",
+    "compile": "npm run clean && cross-env NODE_ENV=production babel src/lib --out-dir dist --copy-files",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "publish:npm": "rm -rf dist && mkdir dist && babel src/lib -d dist --copy-files"
+    "prepare": "rm -rf dist && mkdir dist && tsc"
   },
   "eslintConfig": {
     "extends": [
@@ -58,7 +58,8 @@
     "@babel/cli": "^7.20.7",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "typescript": "^4.9.5"
   },
   "description": "- 즉시 사용할 수 있는 세련된 컴포넌트 및 위젯을 다양하게 경험할 수 있습니다. - 딥팩토리 디자인은 사용자의 디자인 경험을 우선시 합니다. - 공식 웹페이지에서 사용에 대한 자세한 설명 및 다양한 자료들을 제공합니다.",
   "keywords": [],

@@ -1,8 +1,18 @@
 import { css } from "@emotion/css";
-import React from "react";
+import React, { ReactNode } from "react";
 
-// 타이틀
-export function Title(props) {
+type SerializedStyles = ReturnType<typeof css>;
+
+interface TitleProps {
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "strong";
+  children: ReactNode;
+  fontSize?: string;
+  color?: string;
+  w?: string;
+  styles?: SerializedStyles;
+}
+
+export function Title(props: TitleProps) {
   const { as, children, styles, fontSize, color, w } = props;
 
   return (
@@ -130,9 +140,17 @@ export function Title(props) {
   );
 }
 
-// Text
-export function Text(props) {
-  const { as, children, fontSize, color, w, styles } = props;
+interface TextProps {
+  as?: "p";
+  children: ReactNode;
+  fontSize?: string;
+  color?: string;
+  w?: string;
+  styles?: SerializedStyles;
+}
+
+export function Text(props: TextProps) {
+  const { children, fontSize, color, w, styles } = props;
 
   return (
     <>
@@ -153,8 +171,14 @@ export function Text(props) {
   );
 }
 
-// TextSpan
-export function TextSpan(props) {
+interface TextSpanProps {
+  children: ReactNode;
+  fontSize?: string;
+  color?: string;
+  w?: string;
+  styles?: SerializedStyles;
+}
+export function TextSpan(props: TextSpanProps) {
   const { children, fontSize, color, w, styles } = props;
 
   return (
