@@ -2,17 +2,15 @@ import { css, CSSObject } from "@emotion/css";
 import React, { ReactNode } from "react";
 
 interface SectionProps {
-  styles?: CSSObject;
   children?: ReactNode;
 }
 
 export function Section(props: SectionProps) {
-  const { styles, children } = props;
+  const { children } = props;
 
   return (
     <section
       className={css({
-        ...styles,
         position: "relative",
         width: "100%",
         height: "100%",
@@ -28,7 +26,6 @@ export function Section(props: SectionProps) {
 }
 
 interface RowProps {
-  styles?: CSSObject;
   children?: ReactNode;
   gap?: string;
   start?: boolean;
@@ -38,12 +35,11 @@ interface RowProps {
 }
 
 export function Row(props: RowProps) {
-  const { styles, children, gap, start, end, padding, margin } = props;
+  const { children, gap, start, end, padding, margin } = props;
 
   return (
     <div
       className={css({
-        ...styles,
         width: "100%",
         display: "flex",
         flexDirection: "row",
@@ -60,7 +56,6 @@ export function Row(props: RowProps) {
 }
 
 interface ColumnProps {
-  styles?: CSSObject;
   children?: ReactNode;
   gap?: string;
   center?: boolean;
@@ -70,21 +65,20 @@ interface ColumnProps {
 }
 
 export function Column(props: ColumnProps) {
-  const { styles, children, gap, center, end, padding, margin } = props;
+  const { children, gap, center, end, padding, margin } = props;
 
   return (
     <div
-      className={css({
-        ...styles,
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: center ? "center" : end ? "end" : "start",
-        rowGap: gap,
-        padding,
-        margin,
-        transition: "0.3s ease-in-out",
-      })}
+      className={css`
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: ${center ? "center" : end ? "end" : "start"};
+        row-gap: ${gap};
+        padding: ${padding};
+        margin: ${margin};
+        transition: 0.3s ease-in-out;
+      `}
     >
       {children}
     </div>
@@ -92,7 +86,6 @@ export function Column(props: ColumnProps) {
 }
 
 interface BoxProps {
-  styles?: CSSObject;
   children?: ReactNode;
   gap?: string;
   center?: boolean;
@@ -103,13 +96,11 @@ interface BoxProps {
 }
 
 export function Box(props: BoxProps) {
-  const { styles, children, gap, center, end, padding, margin, maxWidth } =
-    props;
+  const { children, gap, center, end, padding, margin, maxWidth } = props;
 
   return (
     <div
       className={css({
-        ...styles,
         width: "100%",
         maxWidth,
         display: "flex",
@@ -127,19 +118,17 @@ export function Box(props: BoxProps) {
 }
 
 interface SizedBoxProps {
-  styles?: CSSObject;
   children?: ReactNode;
   width?: string;
   height?: string;
 }
 
 export function SizedBox(props: SizedBoxProps) {
-  const { styles, children, width, height } = props;
+  const { children, width, height } = props;
 
   return (
     <div
       className={css({
-        ...styles,
         height: width ? "100%" : height,
         width: height ? "100%" : width,
       })}

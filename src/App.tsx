@@ -6,6 +6,7 @@ import {
   Drawer,
   Row,
   Section,
+  SizedBox,
   Snackbar,
   Title,
 } from "./lib";
@@ -21,14 +22,26 @@ export default function App() {
 
   return (
     <>
-      <Section></Section>
-      // The default sort is center and can be sorted by start or end. The gap
-      between each widget is adjustable with a gap.
-      <Row gap="20px" start>
-        <Box>box</Box>
-        <Box maxWidth="200px">box</Box>
-        <Box>box</Box>
-      </Row>
+      <Section>
+        {/* <Row start gap="20px" padding="30px" margin="50px">
+          <Box>box</Box>
+          <Box maxWidth="200px">box</Box> 
+          <Box>box</Box>
+        </Row> */}
+        <Column center gap="10px" padding="40px" margin="50px">
+          <Box>box</Box>
+          <Box>box</Box>
+          <Box>box</Box>
+        </Column>
+
+        <SizedBox height="500px" />
+
+        <Column center gap="10px" padding="30px" margin="10px 20px">
+          <Box>box</Box>
+          <Box>box</Box>
+          <Box>box</Box>
+        </Column>
+      </Section>
     </>
   );
 }

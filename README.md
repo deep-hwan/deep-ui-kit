@@ -18,29 +18,49 @@ Design Ui-Kit provides design layout and animation modals
 
 ---
 
-## Simple Usage
+## Simple UsageV
 
 ### Layout
 
 A widget layout is available for each layout type.
 
-- Section : section Teg in html
-- Row : Horizontal alignment layout
-- Column : Vertical alignment layout
-- Box : It's a flexible box
+- **Section** : section Teg in html
+- **Row** : Horizontal alignment layout
+- **Column** : Vertical alignment layout
+- **Box** : It's a flexible box
+- **SizedBox** : Allows you to adjust the layout space
+
+---
+
+**Example**
 
 ```jsx
 function App() {
   return (
     <Section>
-      // The default sort is center and can be sorted by start or end. The gap
-      between each widget is adjustable with a gap.
-      <Row gap="20px" start>
+      <Row start gap="20px" padding="30px" margin="50px">
         <Box>box</Box>
-        <Box maxWidth="200px">box</Box> // Box는
+        <Box maxWidth="200px">box</Box>
         <Box>box</Box>
       </Row>
+
+      <SizedBox height="500px" />
+
+      <Column center gap="10px" padding="30px" margin="50px">
+        <Box>box</Box>
+        <Box>box</Box>
+        <Box>box</Box>
+      </Column>
     </Section>
   );
 }
 ```
+
+**Params**
+
+| Command    | layout default                         | props                            |
+| ---------- | -------------------------------------- | -------------------------------- |
+| `Section`  | section Teg in html                    |
+| `Row`      | layout : center                        | start, end, gap, padding, margin |
+| `Column`   | layout : start                         | start, end, gap, padding, margin |
+| `SizedBox` | default = width : 100% , height : 100% | width, height                    |
