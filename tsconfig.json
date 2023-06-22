@@ -3,6 +3,7 @@
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
+    "checkJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
@@ -18,5 +19,6 @@
     "declaration": true,
     "outDir": "./dist"
   },
-  "include": ["./src/lib/**/*.tsx", "./src/lib/**/*.ts"]
+  "include": ["./src/lib/**/*.tsx", "./src/lib/**/*.ts"],
+  "exclude": ["node_modules"]
 }
