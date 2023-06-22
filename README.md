@@ -278,6 +278,7 @@ function App() {
 ## LoadingSpinner Usage
 
 Used when loading when calling API or adding data
+You can adjust the size through size.
 
 ### Example
 
@@ -285,7 +286,7 @@ Used when loading when calling API or adding data
 function App() {
   return (
     <>
-      <LoadingSpinner />
+      <LoadingSpinner size="40px" /> // default : 30px
     </>
   );
 }
