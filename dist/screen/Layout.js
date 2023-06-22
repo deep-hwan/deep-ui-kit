@@ -1,3 +1,4 @@
+"use strict";
 var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
@@ -13,11 +14,13 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-import { jsx as _jsx } from "react/jsx-runtime";
-import { css } from "@emotion/css";
-export function Section(props) {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SizedBox = exports.Box = exports.Column = exports.Row = exports.Section = void 0;
+var jsx_runtime_1 = require("react/jsx-runtime");
+var css_1 = require("@emotion/css");
+function Section(props) {
     var children = props.children;
-    return (_jsx("section", __assign({ className: css({
+    return ((0, jsx_runtime_1.jsx)("section", __assign({ className: (0, css_1.css)({
             position: "relative",
             width: "100%",
             height: "100%",
@@ -27,9 +30,10 @@ export function Section(props) {
             transition: "0.3s ease-in-out",
         }) }, { children: children })));
 }
-export function Row(props) {
+exports.Section = Section;
+function Row(props) {
     var children = props.children, gap = props.gap, start = props.start, end = props.end, padding = props.padding, margin = props.margin;
-    return (_jsx("div", __assign({ className: css({
+    return ((0, jsx_runtime_1.jsx)("div", __assign({ className: (0, css_1.css)({
             width: "100%",
             display: "flex",
             flexDirection: "row",
@@ -40,13 +44,15 @@ export function Row(props) {
             transition: "0.3s ease-in-out",
         }) }, { children: children })));
 }
-export function Column(props) {
+exports.Row = Row;
+function Column(props) {
     var children = props.children, gap = props.gap, center = props.center, end = props.end, padding = props.padding, margin = props.margin;
-    return (_jsx("div", __assign({ className: css(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n        width: 100%;\n        display: flex;\n        flex-direction: column;\n        align-items: ", ";\n        row-gap: ", ";\n        padding: ", ";\n        margin: ", ";\n        transition: 0.3s ease-in-out;\n      "], ["\n        width: 100%;\n        display: flex;\n        flex-direction: column;\n        align-items: ", ";\n        row-gap: ", ";\n        padding: ", ";\n        margin: ", ";\n        transition: 0.3s ease-in-out;\n      "])), center ? "center" : end ? "end" : "start", gap, padding, margin) }, { children: children })));
+    return ((0, jsx_runtime_1.jsx)("div", __assign({ className: (0, css_1.css)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n        width: 100%;\n        display: flex;\n        flex-direction: column;\n        align-items: ", ";\n        row-gap: ", ";\n        padding: ", ";\n        margin: ", ";\n        transition: 0.3s ease-in-out;\n      "], ["\n        width: 100%;\n        display: flex;\n        flex-direction: column;\n        align-items: ", ";\n        row-gap: ", ";\n        padding: ", ";\n        margin: ", ";\n        transition: 0.3s ease-in-out;\n      "])), center ? "center" : end ? "end" : "start", gap, padding, margin) }, { children: children })));
 }
-export function Box(props) {
+exports.Column = Column;
+function Box(props) {
     var children = props.children, gap = props.gap, center = props.center, end = props.end, padding = props.padding, margin = props.margin, maxWidth = props.maxWidth;
-    return (_jsx("div", __assign({ className: css({
+    return ((0, jsx_runtime_1.jsx)("div", __assign({ className: (0, css_1.css)({
             width: "100%",
             maxWidth: maxWidth,
             display: "flex",
@@ -58,11 +64,13 @@ export function Box(props) {
             transition: "0.3s ease-in-out",
         }) }, { children: children })));
 }
-export function SizedBox(props) {
+exports.Box = Box;
+function SizedBox(props) {
     var children = props.children, width = props.width, height = props.height;
-    return (_jsx("div", __assign({ className: css({
+    return ((0, jsx_runtime_1.jsx)("div", __assign({ className: (0, css_1.css)({
             height: width ? "100%" : height,
             width: height ? "100%" : width,
         }) }, { children: children })));
 }
+exports.SizedBox = SizedBox;
 var templateObject_1;
