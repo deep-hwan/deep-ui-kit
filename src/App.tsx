@@ -25,9 +25,7 @@ export default function App() {
   return (
     <>
       <Section>
-        <Title as="h6" fontSize="60px" color="#111" w="500">
-          asdsad
-        </Title>
+        <Title as="h6" fontSize="60px" color="#111" w="500"></Title>
         <Text fontSize="15px" color="#797979" w="500">
           asdsad
         </Text>
@@ -44,6 +42,8 @@ export default function App() {
           <Box>box</Box>
           <Box>box</Box>
         </Column>
+
+        <Index />
       </Section>
     </>
   );
@@ -77,30 +77,18 @@ function Index() {
       <Dialog
         view={isDialog}
         onCancel={() => setIsDialog(false)}
-        theme="light"
         cancelTab={true}
-      >
-        ..
-      </Dialog>
+      ></Dialog>
 
-      <Snackbar
-        view={isOpen}
-        onCancel={() => setIsOpen(false)}
-        theme="light"
-        cancelTab={true}
-      >
-        Hello deeop-ui-kit this is tpye "SnackBar"
+      <Snackbar view={isOpen} onCancel={() => setIsOpen(false)} theme="light">
+        asdd
       </Snackbar>
 
       <Drawer view={isDrawer} onCancel={() => setIsDrawer(false)} theme="light">
         ..
       </Drawer>
 
-      <BottomSheet
-        view={isSheet}
-        onCancel={() => setIsSheet(false)}
-        theme="light"
-      >
+      <BottomSheet view={isSheet} onCancel={() => setIsSheet(false)}>
         ..
       </BottomSheet>
     </>

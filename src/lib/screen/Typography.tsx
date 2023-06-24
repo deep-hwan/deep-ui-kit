@@ -5,7 +5,7 @@ type SerializedStyles = ReturnType<typeof css>;
 
 interface TitleProps {
   as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "strong";
-  children: ReactNode;
+  children?: ReactNode;
   fontSize?: string;
   color?: string;
   w?: string;
@@ -132,7 +132,7 @@ export function Title(props: TitleProps) {
 }
 
 interface TextProps {
-  children: ReactNode;
+  children?: ReactNode;
   fontSize?: string;
   color?: string;
   w?: string;

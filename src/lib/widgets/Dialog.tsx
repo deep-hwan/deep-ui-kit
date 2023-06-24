@@ -9,8 +9,8 @@ interface DialogProps {
   theme: string;
 }
 
-export default function Dialog(props: DialogProps) {
-  const { children, view, onCancel, cancelTab, theme } = props;
+export default function Dialog(props: Partial<DialogProps>) {
+  const { children, view, onCancel, cancelTab, theme } = props as DialogProps;
   const ref = useRef<HTMLDivElement>(null);
 
   const clickModalOutside = (event: MouseEvent) => {

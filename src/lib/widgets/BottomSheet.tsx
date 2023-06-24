@@ -8,8 +8,8 @@ interface BottomSheetProps {
   theme: string;
 }
 
-export default function BottomSheet(props: BottomSheetProps) {
-  const { children, view, onCancel, theme } = props;
+export default function BottomSheet(props: Partial<BottomSheetProps>) {
+  const { children, view, onCancel, theme } = props as BottomSheetProps;
   const ref = useRef<HTMLDivElement>(null);
   const [startY, setStartY] = useState(0);
   const [currentY, setCurrentY] = useState(0);

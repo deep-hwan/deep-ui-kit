@@ -9,8 +9,8 @@ interface SnackbarProps {
   theme: "dark" | "light";
 }
 
-export default function Snackbar(props: SnackbarProps) {
-  const { children, view, onCancel, cancelTab, theme } = props;
+export default function Snackbar(props: Partial<SnackbarProps>) {
+  const { children, view, onCancel, cancelTab, theme } = props as SnackbarProps;
 
   const ref = useRef<HTMLDivElement>(null);
 

@@ -8,8 +8,8 @@ interface DrawerProps {
   theme: "dark" | "light";
 }
 
-export default function Drawers(props: DrawerProps) {
-  const { children, view, onCancel, theme } = props;
+export default function Drawers(props: Partial<DrawerProps>) {
+  const { children, view, onCancel, theme } = props as DrawerProps;
   const ref = useRef<HTMLDivElement>(null);
 
   const clickModalOutside = (event: MouseEvent) => {
