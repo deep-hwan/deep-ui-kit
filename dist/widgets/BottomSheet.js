@@ -22,10 +22,10 @@ var jsx_runtime_1 = require("react/jsx-runtime");
 var styled_1 = __importDefault(require("@emotion/styled"));
 var react_1 = require("react");
 function BottomSheet(props) {
-    var children = props.children, view = props.view, onCancel = props.onCancel, theme = props.theme;
+    var _a = props, children = _a.children, view = _a.view, onCancel = _a.onCancel, theme = _a.theme;
     var ref = (0, react_1.useRef)(null);
-    var _a = (0, react_1.useState)(0), startY = _a[0], setStartY = _a[1];
-    var _b = (0, react_1.useState)(0), currentY = _b[0], setCurrentY = _b[1];
+    var _b = (0, react_1.useState)(0), startY = _b[0], setStartY = _b[1];
+    var _c = (0, react_1.useState)(0), currentY = _c[0], setCurrentY = _c[1];
     var handleTouchStart = function (event) {
         var touch = event.touches[0];
         setStartY(touch.clientY);

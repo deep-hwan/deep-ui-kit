@@ -6,5 +6,5 @@ interface DialogProps {
     cancelTab: boolean;
     theme: string;
 }
-export default function Dialog(props: DialogProps): import("react/jsx-runtime").JSX.Element;
+export default function Dialog(props: Partial<DialogProps>): import("react/jsx-runtime").JSX.Element;
 export {};

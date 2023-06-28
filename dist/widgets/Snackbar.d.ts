@@ -6,5 +6,5 @@ interface SnackbarProps {
     cancelTab: boolean;
     theme: "dark" | "light";
 }
-export default function Snackbar(props: SnackbarProps): import("react/jsx-runtime").JSX.Element;
+export default function Snackbar(props: Partial<SnackbarProps>): import("react/jsx-runtime").JSX.Element;
 export {};

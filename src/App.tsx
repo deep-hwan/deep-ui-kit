@@ -29,19 +29,8 @@ export default function App() {
         <Text fontSize="15px" color="#797979" w="500">
           asdsad
         </Text>
-        <Column center gap="10px" padding="40px" margin="50px">
-          <Box>box</Box>
-          <Box>box</Box>
-          <Box>box</Box>
-        </Column>
 
         <SizedBox height="500px" />
-
-        <Column center gap="10px" padding="30px" margin="10px 20px">
-          <Box>box</Box>
-          <Box>box</Box>
-          <Box>box</Box>
-        </Column>
 
         <Index />
       </Section>

@@ -5,5 +5,5 @@ interface DrawerProps {
     onCancel: () => void;
     theme: "dark" | "light";
 }
-export default function Drawers(props: DrawerProps): import("react/jsx-runtime").JSX.Element;
+export default function Drawers(props: Partial<DrawerProps>): import("react/jsx-runtime").JSX.Element;
 export {};

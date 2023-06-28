@@ -5,5 +5,5 @@ interface BottomSheetProps {
     onCancel: () => void;
     theme: string;
 }
-export default function BottomSheet(props: BottomSheetProps): import("react/jsx-runtime").JSX.Element;
+export default function BottomSheet(props: Partial<BottomSheetProps>): import("react/jsx-runtime").JSX.Element;
 export {};

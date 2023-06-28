@@ -127,8 +127,8 @@ const Sheet = styled.div<{ isActive: boolean; theme: string }>`
 
   @media (max-width: 768px) {
     max-width: 100%;
-    top: ${({ isActive }) => (isActive ? "20px" : "100%")};
-    height: calc(100vh - 20px);
+    top: ${({ isActive }) => (isActive ? "6px" : "100%")};
+    height: calc(100vh - 6px);
   }
 `;
 

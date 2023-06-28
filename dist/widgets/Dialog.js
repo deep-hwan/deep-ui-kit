@@ -22,7 +22,7 @@ var jsx_runtime_1 = require("react/jsx-runtime");
 var styled_1 = __importDefault(require("@emotion/styled"));
 var react_1 = require("react");
 function Dialog(props) {
-    var children = props.children, view = props.view, onCancel = props.onCancel, cancelTab = props.cancelTab, theme = props.theme;
+    var _a = props, children = _a.children, view = _a.view, onCancel = _a.onCancel, cancelTab = _a.cancelTab, theme = _a.theme;
     var ref = (0, react_1.useRef)(null);
     var clickModalOutside = function (event) {
         if (view && ref.current && !ref.current.contains(event.target)) {
