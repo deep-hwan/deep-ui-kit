@@ -3,7 +3,7 @@ import { Box, Row, Column, SizedBox, Section } from "./screen/Layout";
 
 import Snackbar from "./widgets/Snackbar";
 import Dialog from "./widgets/Dialog";
-import ButtomSheet from "./widgets/BottomSheet";
+import BottomSheet from "./widgets/BottomSheet";
 import Drawer from "./widgets/Drawer";
 
 import LoadingSpinner from "./screen/loading-spinner";
@@ -20,7 +20,7 @@ export {
   Section,
   Snackbar,
   Dialog,
-  ButtomSheet,
+  BottomSheet,
   Drawer,
   LoadingSpinner,
   ScrollTopTab,
