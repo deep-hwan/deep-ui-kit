@@ -76,7 +76,7 @@ var LayerBlur = styled_1.default.div(templateObject_1 || (templateObject_1 = __m
     var isActive = _a.isActive;
     return (isActive ? "flex" : "none");
 });
-var Sheet = styled_1.default.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  z-index: 99990;\n  position: fixed;\n  top: ", ";\n  left: 50%;\n  width: 100%;\n  max-width: 560px;\n  height: calc(100vh - 60px);\n  display: flex;\n  flex-direction: column;\n  background-color: ", ";\n  border-radius: 22px 22px 0 0;\n  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.1);\n  transition: 0.25s ease-in-out;\n  opacity: ", ";\n\n  &::-webkit-scrollbar {\n    display: none;\n  }\n\n  @media (max-width: 768px) {\n    max-width: 100%;\n    top: ", ";\n    height: calc(100vh - 20px);\n  }\n"], ["\n  z-index: 99990;\n  position: fixed;\n  top: ", ";\n  left: 50%;\n  width: 100%;\n  max-width: 560px;\n  height: calc(100vh - 60px);\n  display: flex;\n  flex-direction: column;\n  background-color: ", ";\n  border-radius: 22px 22px 0 0;\n  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.1);\n  transition: 0.25s ease-in-out;\n  opacity: ", ";\n\n  &::-webkit-scrollbar {\n    display: none;\n  }\n\n  @media (max-width: 768px) {\n    max-width: 100%;\n    top: ", ";\n    height: calc(100vh - 20px);\n  }\n"])), function (_a) {
+var Sheet = styled_1.default.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  z-index: 99990;\n  position: fixed;\n  top: ", ";\n  left: 50%;\n  width: 100%;\n  max-width: 560px;\n  height: calc(100vh - 60px);\n  display: flex;\n  flex-direction: column;\n  background-color: ", ";\n  border-radius: 22px 22px 0 0;\n  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.1);\n  transition: 0.25s ease-in-out;\n  opacity: ", ";\n\n  &::-webkit-scrollbar {\n    display: none;\n  }\n\n  @media (max-width: 768px) {\n    max-width: 100%;\n    top: ", ";\n    height: calc(100vh - 6px);\n  }\n"], ["\n  z-index: 99990;\n  position: fixed;\n  top: ", ";\n  left: 50%;\n  width: 100%;\n  max-width: 560px;\n  height: calc(100vh - 60px);\n  display: flex;\n  flex-direction: column;\n  background-color: ", ";\n  border-radius: 22px 22px 0 0;\n  box-shadow: 0 3px 30px rgba(0, 0, 0, 0.1);\n  transition: 0.25s ease-in-out;\n  opacity: ", ";\n\n  &::-webkit-scrollbar {\n    display: none;\n  }\n\n  @media (max-width: 768px) {\n    max-width: 100%;\n    top: ", ";\n    height: calc(100vh - 6px);\n  }\n"])), function (_a) {
     var isActive = _a.isActive;
     return (isActive ? "80px" : "100%");
 }, function (_a) {
@@ -87,7 +87,7 @@ var Sheet = styled_1.default.div(templateObject_2 || (templateObject_2 = __makeT
     return (isActive ? 1 : 0);
 }, function (_a) {
     var isActive = _a.isActive;
-    return (isActive ? "20px" : "100%");
+    return (isActive ? "6px" : "100%");
 });
 var CloseBox = styled_1.default.div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  width: 100%;\n  padding: 11px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n\n  button {\n    width: 50px;\n    height: 6px;\n    background-color: ", ";\n    border: none;\n    outline: none;\n    border-radius: 100px;\n    cursor: pointer;\n  }\n"], ["\n  width: 100%;\n  padding: 11px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n\n  button {\n    width: 50px;\n    height: 6px;\n    background-color: ", ";\n    border: none;\n    outline: none;\n    border-radius: 100px;\n    cursor: pointer;\n  }\n"])), function (_a) {
     var theme = _a.theme;

@@ -139,7 +139,7 @@ const Box = styled.div<{ theme: string }>`
   }
 
   @media (max-width: 480px) {
-    min-width: 340px;
+    min-width: 300px;
   }
 `;
 
