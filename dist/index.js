@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ScrollTopTab = exports.LoadingSpinner = exports.Drawer = exports.ButtomSheet = exports.Dialog = exports.Snackbar = exports.Section = exports.SizedBox = exports.Row = exports.Column = exports.Box = exports.Title = exports.TextSpan = exports.Text = void 0;
+exports.ScrollTopTab = exports.LoadingSpinner = exports.Drawer = exports.BottomSheet = exports.Dialog = exports.Snackbar = exports.Section = exports.SizedBox = exports.Row = exports.Column = exports.Box = exports.Title = exports.TextSpan = exports.Text = void 0;
 var Typography_1 = require("./screen/Typography");
 Object.defineProperty(exports, "Text", { enumerable: true, get: function () { return Typography_1.Text; } });
 Object.defineProperty(exports, "Title", { enumerable: true, get: function () { return Typography_1.Title; } });
@@ -19,7 +19,7 @@ exports.Snackbar = Snackbar_1.default;
 var Dialog_1 = __importDefault(require("./widgets/Dialog"));
 exports.Dialog = Dialog_1.default;
 var BottomSheet_1 = __importDefault(require("./widgets/BottomSheet"));
-exports.ButtomSheet = BottomSheet_1.default;
+exports.BottomSheet = BottomSheet_1.default;
 var Drawer_1 = __importDefault(require("./widgets/Drawer"));
 exports.Drawer = Drawer_1.default;
 var loading_spinner_1 = __importDefault(require("./screen/loading-spinner"));

@@ -71,9 +71,6 @@ export default function BottomSheet(props: Partial<BottomSheetProps>) {
         isActive={view}
         ref={ref}
         style={{ transform: `translate(-50%, ${currentY - startY}px)` }}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
       >
         <CloseBox theme={theme}>
           <button
@@ -154,6 +151,10 @@ const View = styled.div`
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+
+  @supports (-webkit-touch-callout: none) {
+    height: -webkit-fill-available;
+  }
 
   &::-webkit-scrollbar {
     width: 4px;
